@@ -9,7 +9,11 @@ dogum_yili = int(input("Doğum yılınızı giriniz: "))
 # Güncel yılı öğren
 guncel_yil = datetime.now().year
 
-# Kullanıcının yaşını hesapla
+# Kullanıcının yaşını hesapla ve gelecek yıl kontrolü yap
+if dogum_yili > guncel_yil:
+    print("Hata: Doğum yılı gelecekte olamaz!")
+    exit()
+
 yas = guncel_yil - dogum_yili
 
 # Kişiye özel karşılama mesajı yazdır
